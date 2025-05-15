@@ -1,14 +1,12 @@
 
 import React from 'react';
-import { ExternalLink, Github, Lock, Globe, Shield } from 'lucide-react';
+import { Lock, Globe, Shield } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   tags: string[];
   imageUrl?: string;
-  repoUrl?: string;
-  demoUrl?: string;
   icon?: 'shield' | 'globe' | 'lock';
 }
 
@@ -17,8 +15,6 @@ const ProjectCard = ({
   description,
   tags,
   imageUrl,
-  repoUrl,
-  demoUrl,
   icon = 'shield'
 }: ProjectCardProps) => {
   const iconMap = {
@@ -48,32 +44,6 @@ const ProjectCard = ({
               {tag}
             </span>
           ))}
-        </div>
-        
-        <div className="flex gap-3">
-          {repoUrl && (
-            <a 
-              href={repoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-sm text-gray-300 hover:text-hacker-green transition-colors"
-            >
-              <Github size={16} />
-              <span>Repo</span>
-            </a>
-          )}
-          
-          {demoUrl && (
-            <a 
-              href={demoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-sm text-gray-300 hover:text-hacker-green transition-colors"
-            >
-              <ExternalLink size={16} />
-              <span>Demo</span>
-            </a>
-          )}
         </div>
       </div>
     </div>

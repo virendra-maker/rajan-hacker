@@ -1,6 +1,6 @@
 
-import React, { useEffect, useState } from 'react';
-import { Shield, Github, Mail } from 'lucide-react';
+import React, { useState } from 'react';
+import { Shield, Telegram } from 'lucide-react';
 import TypedText from '../components/TypedText';
 import CodeRain from '../components/CodeRain';
 import Header from '../components/Header';
@@ -15,7 +15,6 @@ import { toast } from '@/components/ui/use-toast';
 
 const Index = () => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,7 +25,6 @@ const Index = () => {
       duration: 5000,
     });
     setName('');
-    setEmail('');
     setMessage('');
   };
 
@@ -34,9 +32,9 @@ const Index = () => {
     <div className="min-h-screen bg-hacker-dark text-white relative">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section with Enhanced Matrix Background */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <CodeRain />
+        <CodeRain density={70} speed={1.5} />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold mb-6">
             <span className="text-hacker-green animate-text-flicker">RAJAN</span> HACKER
@@ -122,7 +120,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-orbitron mb-4">MY <span className="text-hacker-green">PROJECTS</span></h2>
             <div className="w-16 h-1 bg-hacker-green mx-auto"></div>
             <p className="mt-4 max-w-2xl mx-auto text-gray-300">
-              Featured security tools and ethical hacking projects I've developed or contributed to.
+              Featured security tools and ethical hacking projects I've developed.
             </p>
           </div>
           
@@ -131,7 +129,6 @@ const Index = () => {
               title="SecureScanner"
               description="An automated vulnerability scanner that checks web applications for common security flaws like XSS, SQL injection, and CSRF."
               tags={["Python", "Web Security", "Automation"]}
-              repoUrl="https://github.com/rajanhacker/securescanner"
               icon="shield"
             />
             
@@ -139,8 +136,6 @@ const Index = () => {
               title="PacketAnalyzer"
               description="Real-time network traffic analysis tool designed to detect suspicious activities and potential intrusion attempts."
               tags={["C++", "Networking", "Forensics"]}
-              repoUrl="https://github.com/rajanhacker/packetanalyzer"
-              demoUrl="https://packetanalyzer-demo.rajan.dev"
               icon="globe"
             />
             
@@ -148,7 +143,6 @@ const Index = () => {
               title="AuthGuardian"
               description="Multi-factor authentication library with support for TOTP, FIDO2, and biometric verification."
               tags={["Java", "Security", "Authentication"]}
-              repoUrl="https://github.com/rajanhacker/authguardian"
               icon="lock"
             />
             
@@ -156,7 +150,6 @@ const Index = () => {
               title="DataCrypt"
               description="File encryption utility with support for AES-256, ChaCha20, and multiple key derivation functions."
               tags={["Rust", "Cryptography", "CLI"]}
-              repoUrl="https://github.com/rajanhacker/datacrypt"
               icon="lock"
             />
             
@@ -164,7 +157,6 @@ const Index = () => {
               title="SecurityScorecard"
               description="Automated security assessment tool that grades organizations based on their security posture and vulnerability exposure."
               tags={["JavaScript", "API", "Risk Assessment"]}
-              repoUrl="https://github.com/rajanhacker/securityscorecard"
               icon="shield"
             />
             
@@ -172,22 +164,8 @@ const Index = () => {
               title="NetworkMapper"
               description="Visual network mapping tool that discovers devices, services, and vulnerabilities across enterprise networks."
               tags={["Python", "Network Security", "Visualization"]}
-              repoUrl="https://github.com/rajanhacker/networkmapper"
-              demoUrl="https://networkmapper-demo.rajan.dev"
               icon="globe"
             />
-          </div>
-          
-          <div className="text-center mt-10">
-            <a 
-              href="https://github.com/rajanhacker" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-hacker-green hover:underline"
-            >
-              <Github className="mr-2 h-5 w-5" />
-              View more projects on GitHub
-            </a>
           </div>
         </div>
       </section>
@@ -246,26 +224,18 @@ const Index = () => {
             <div>
               <h3 className="text-2xl font-orbitron mb-6 text-hacker-green">&lt; Get in Touch /&gt;</h3>
               <p className="mb-6">
-                I'm available for freelance security work, consulting, training, and speaking engagements. Feel free to reach out using the contact form or through my social channels.
+                I'm available for freelance security work, consulting, training, and speaking engagements. Feel free to reach out using the contact form or through my Telegram channel.
               </p>
               
               <div className="space-y-4">
                 <a 
-                  href="mailto:contact@rajanhacker.com" 
-                  className="flex items-center text-gray-300 hover:text-hacker-green transition-colors"
-                >
-                  <Mail className="mr-3 h-5 w-5" />
-                  contact@rajanhacker.com
-                </a>
-                
-                <a 
-                  href="https://github.com/rajanhacker" 
+                  href="https://t.me/Rstxyxhxurajan" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-300 hover:text-hacker-green transition-colors"
                 >
-                  <Github className="mr-3 h-5 w-5" />
-                  github.com/rajanhacker
+                  <Telegram className="mr-3 h-5 w-5" />
+                  @Rstxyxhxurajan
                 </a>
                 
                 <div className="flex items-center text-gray-300">
@@ -285,17 +255,6 @@ const Index = () => {
                     className="bg-hacker-dark border-gray-700 focus:border-hacker-green"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <Input 
-                    type="email"
-                    placeholder="Your Email"
-                    className="bg-hacker-dark border-gray-700 focus:border-hacker-green"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
