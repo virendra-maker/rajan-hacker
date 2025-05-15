@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Shield, Telegram } from 'lucide-react';
+import { Shield, MessagesSquare } from 'lucide-react';
 import TypedText from '../components/TypedText';
 import CodeRain from '../components/CodeRain';
 import Header from '../components/Header';
@@ -234,7 +233,7 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-300 hover:text-hacker-green transition-colors"
                 >
-                  <Telegram className="mr-3 h-5 w-5" />
+                  <MessagesSquare className="mr-3 h-5 w-5" />
                   @Rstxyxhxurajan
                 </a>
                 
