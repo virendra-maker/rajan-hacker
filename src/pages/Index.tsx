@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Shield, GitHub, Mail } from 'lucide-react';
+import { Shield, Github, Mail } from 'lucide-react';
 import TypedText from '../components/TypedText';
 import CodeRain from '../components/CodeRain';
 import Header from '../components/Header';
@@ -141,7 +141,7 @@ const Index = () => {
               tags={["C++", "Networking", "Forensics"]}
               repoUrl="https://github.com/rajanhacker/packetanalyzer"
               demoUrl="https://packetanalyzer-demo.rajan.dev"
-              icon="wifi"
+              icon="globe"
             />
             
             <ProjectCard 
@@ -185,7 +185,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center text-hacker-green hover:underline"
             >
-              <GitHub className="mr-2 h-5 w-5" />
+              <Github className="mr-2 h-5 w-5" />
               View more projects on GitHub
             </a>
           </div>
@@ -217,7 +217,7 @@ const Index = () => {
             />
             
             <ServiceCard 
-              icon="wifi"
+              icon="database"
               title="Network Security"
               description="Hardening your network infrastructure against threats with proper configurations, monitoring, and defensive measures."
             />
@@ -264,7 +264,7 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-300 hover:text-hacker-green transition-colors"
                 >
-                  <GitHub className="mr-3 h-5 w-5" />
+                  <Github className="mr-3 h-5 w-5" />
                   github.com/rajanhacker
                 </a>
                 
